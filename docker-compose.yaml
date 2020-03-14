@@ -1,0 +1,11 @@
+version: '3'
+# run from project root withgulp
+services:
+  angular:
+    build:
+      context: ./
+      dockerfile: docker/node-12-angular-9
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./app/:/app/:cached
